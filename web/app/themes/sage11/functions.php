@@ -58,3 +58,9 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+add_action('init', function () {
+  remove_post_type_support('page', 'editor');
+}, 100);
+
+require_once __DIR__ . '/app/helpers.php';
